@@ -1,0 +1,14 @@
+[
+  {
+    "origin": ["https://dscubc-dev.web.app/:1"],
+    "method": ["GET"],
+    "responseHeader": ["content-type"],
+    "maxAgeSeconds": 1
+  },
+  {
+    "origin": ["http://localhost:3000/"],
+    "method": ["GET"],
+    "responseHeader": ["content-type"],
+    "maxAgeSeconds": 1
+  }
+]
