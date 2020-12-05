@@ -1,11 +1,11 @@
 import { Grid, Typography } from '@material-ui/core';
 import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
-import React, { CSSProperties, ReactElement } from 'react';
+import React, { CSSProperties, ReactElement, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 
 import EventCard from "../components/event/EventCard";
-
+import { getEvents } from '../services/eventService';
 import {Event} from "../types/event";
 
 const pastEvents: Event[] = [
@@ -132,6 +132,10 @@ export default function Events(): ReactElement {
     else {
         events = pastEvents;
     }
+
+    useEffect(() => {
+      console.log(getEvents());
+    }, [])
 
     return (
       <>
